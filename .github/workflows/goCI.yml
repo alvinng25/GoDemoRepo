@@ -62,7 +62,7 @@ jobs:
       with:
         files: report.xml
 
-    - if: ${{ failure }}
+    - if: failure()
     #using name instead of - name to ensure that name is tagged ONLY if there is a failure
       name: Create Issues 
       uses: nashmaniac/create-issue-action@v1.1
