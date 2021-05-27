@@ -1,30 +1,25 @@
-name: Release
+name: Release 
 
 on: 
-  create:
-    tags:
-      - v*
-      
+  create: 
+    tags: 
+      - v* 
 jobs: 
   release:
-    name: Release on Github
+    name: Release n Github 
     runs-on: ubuntu-latest
-    steps:
-      -name: Check out codes
-      uses: actions/checkout@v2
-      
-      - name: Validate Go releaser configuration
-        uses: docker://goreleaser/goreleaser:latest
-        with:
-          arg: check
+    steps: 
+      - name: Check out codes 
+        uses: actions/checkout@v2 
         
-         
-      - name: Release on Github
+      - name: Validate Go releaser configuration
+        uses: docker://goreleaser/goreleaser:latest 
+        with: 
+          arg: check
+          
+      - name: Release on GitHub
         uses: docker://goreleaser/goreleaser:latest
         with:
-          arg: check
-         env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_REMOTE}}
-          
-          
-          
+          arg: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
