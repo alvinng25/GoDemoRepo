@@ -76,8 +76,6 @@ jobs:
         body: Workflow failed for commit ${{github.sha}}
 
     - if: ${{ success() }}
-      #runs-on: ubuntu-latest
-      #uses: actions/checkout@master
       name: send custom message with args
       uses: appleboy/telegram-action@master
       with: 
