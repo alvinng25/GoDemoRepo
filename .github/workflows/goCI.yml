@@ -37,7 +37,7 @@ jobs:
     - name: Checkout private repo
       uses: actions/checkout@v2
       with:
-        respository: lowkh2/GoSchoolRemoteExample
+        repository: lowkh2/GoSchoolRemoteExample
         path: remoteRepo
         token: ${{ secrets.GO_REMOTE }}
         
