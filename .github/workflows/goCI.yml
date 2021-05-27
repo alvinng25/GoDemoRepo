@@ -75,8 +75,6 @@ jobs:
         labels: workflow-failed
         body: Workflow failed for commit ${{github.sha}}
 
-
-    build: 
       name: Build
       runs-on: ubuntu-latest
       steps:
