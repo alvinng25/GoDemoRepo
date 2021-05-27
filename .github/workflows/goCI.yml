@@ -81,4 +81,4 @@ jobs:
       with: 
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: The ${{ github.event_name }} even triggered first step.
+        args: A ${{ github.event_name }} event happened on ${{ github.repository }}
